@@ -1,0 +1,21 @@
+h1, h2 {
+  text-align: center;
+}
+
+.car-configurator {
+  width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}
