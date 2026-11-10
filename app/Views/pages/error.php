@@ -1,0 +1,1 @@
+<section class="section shell narrow"><div class="surface centered error-surface"><span class="kicker">UPS, ALGO HA PASADO</span><h1><?= e($title ?? 'Error') ?></h1><p><?= e($message ?? 'No se pudo completar la solicitud.') ?></p><a class="btn btn-primary" href="/">Volver al inicio ↗</a></div></section>

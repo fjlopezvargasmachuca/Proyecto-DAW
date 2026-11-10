@@ -1,0 +1,41 @@
+ELIGECOCHE - CÓMO SUBIR EL PROYECTO A GITHUB
+
+1. Crea un repositorio VACÍO en tu cuenta de GitHub:
+   https://github.com/new
+   Nombre sugerido: eligecoche-portfolio
+   No marques la opción para crear un README o .gitignore.
+
+2. Abre la terminal en la carpeta EligeCoche-Portfolio (la que contiene README.md).
+
+3. Copia estos comandos, uno por uno:
+
+git init
+git add .
+git commit -m "Moderniza EligeCoche para portfolio DAW"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/eligecoche-portfolio.git
+git push -u origin main
+
+IMPORTANTE: cambia TU_USUARIO por tu nombre de usuario real de GitHub.
+
+Si Git te pide identidad, configura tu nombre y correo:
+git config --global user.name "Tu nombre"
+git config --global user.email "tu-correo@example.com"
+
+Para publicar cambios más adelante:
+git add .
+git commit -m "Explica la mejora"
+git push
+
+PARA EJECUTAR LA APLICACIÓN LOCALMENTE CON DOCKER
+
+1. Copia .env.example a .env y cambia las contraseñas.
+   Windows PowerShell: Copy-Item .env.example .env
+   macOS/Linux: cp .env.example .env
+2. docker compose up --build -d
+3. Abre http://localhost:8080
+4. Registra una cuenta cliente desde la web.
+5. Crea un operario con: docker compose exec web php bin/create-staff.php
+
+El archivo .env está ignorado por Git y NO debe subirse.
+Más detalles de instalación y del proyecto en README.md.

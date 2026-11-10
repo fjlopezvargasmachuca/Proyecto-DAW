@@ -1,0 +1,18 @@
+name: PHP checks
+on:
+  push:
+  pull_request:
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+      - name: Check PHP syntax
+        run: find app config public bin tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Run isolated unit tests
+        run: php tests/run.php
